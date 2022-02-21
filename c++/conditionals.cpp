@@ -44,13 +44,35 @@ int comparison_if_statement_2(int x1, int x2, int x3){
     return result;
 }
 
+int calculator(int x1, int x2, char op){
+    int result;
+
+    if (op == '+'){
+        result = x1+x2;
+    } else if (op == '-'){
+        result=x1-x2;
+    } else if(op == '*'){
+        result=x1*x2;
+    } else if (op == '/'){
+        result=x1/x2;
+    } else {
+        cout << "Invalid Operator";
+    }
+
+    return result;
+}
+
 int main(){
     bool male = false;
     bool tall = true;
 
     // bool_if_statement(male, tall);
 
-    printf("%d", comparison_if_statement_2(111, 501, 891));
+    // printf("%d", comparison_if_statement_2(111, 501, 891));
+
+    int calculator_result = calculator(5, 35, '+');
+
+    printf("%d", calculator_result);
 
     return 0;
 }
